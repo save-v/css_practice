@@ -1,1 +1,65 @@
+.photo {
+  object-fit: cover;
+  height: 231px;
+  position: relative;
+}
+.img {
+  border-radius: 50%;
+  width: 200px;
+}
 
+.people {
+  font-family: Arial, sans-serif;
+  color: #2f4f4f;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  font-weight: 600;
+
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  justify-content: center;
+  gap: 40px 30px;
+
+  @media (min-width: 1000px) {
+    grid-template-columns: repeat(4, 200px);
+  }
+}
+
+.person {
+  border-radius: 12px;
+
+  transition-property: transform, border-radius;
+  transition-duration: 1s;
+  &:hover {
+    background-color: #eeeeee;
+
+    transform: scale(1.2);
+
+    .img {
+      transition-duration: 1s;
+      border-radius: 60px;
+    }
+    .extra {
+      visibility: visible;
+    }
+  }
+}
+
+.extra {
+  visibility: hidden;
+}
+
+.rank {
+  position: absolute;
+  background-color: #ffffff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  top: 84px;
+  left: 158px;
+
+  font-size: 16px;
+  line-height: 32px;
+  text-align: center;
+}
